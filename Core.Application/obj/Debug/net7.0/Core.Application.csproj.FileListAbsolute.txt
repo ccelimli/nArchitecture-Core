@@ -13,3 +13,5 @@ C:\workspace\nArchitecture\src\corePackages\Core.Packages\Core.Application\obj\D
 C:\workspace\nArchitecture\src\corePackages\Core.Packages\Core.Application\bin\Debug\net7.0\Core.Persistence.dll
 C:\workspace\nArchitecture\src\corePackages\Core.Packages\Core.Application\bin\Debug\net7.0\Core.Persistence.pdb
 C:\workspace\nArchitecture\src\corePackages\Core.Packages\Core.Application\obj\Debug\net7.0\Core.Application.csproj.CopyComplete
+C:\workspace\nArchitecture\src\corePackages\Core.Packages\Core.Application\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll
+C:\workspace\nArchitecture\src\corePackages\Core.Packages\Core.Application\bin\Debug\net7.0\Core.CrossCuttingConcerns.pdb
