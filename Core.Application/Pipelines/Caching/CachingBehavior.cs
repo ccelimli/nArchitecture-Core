@@ -1,5 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,14 @@ public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
 {
     private readonly CacheSettings _cacheSetting;
     private readonly IDistributedCache _cache;
+    private readonly ILogger<CachingBehavior<TRequest, TResponse>> _logger;
+
+    public CachingBehavior(IDistributedCache cache, IConfiguration configuration, ILogger<CachingBehavior<TRequest, TResponse>> logger)
+    {
+        _cacheSetting = configuration.GetSection("CacheSettings").Get<CacheSettings>() ?? throw new InvalidOperationException();
+        _cache = cache;
+        _logger = logger;
+    }
 
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
@@ -27,6 +37,7 @@ public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
         if (cachedResponse != null)
         {
             response=JsonSerializer.Deserialize<TResponse>(Encoding.Default.GetString(cachedResponse));
+            _logger.LogInformation($"Fetched from Cache -> {request.CacheKey}");
         }
         else
         {
@@ -46,6 +57,7 @@ public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
         byte[] serializeData = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(response));
 
         await _cache.SetAsync(request.CacheKey, serializeData, cacheOptions, cancellationToken);
+        _logger.LogInformation($"Added from Cache -> {request.CacheKey}");
 
         return response;
 

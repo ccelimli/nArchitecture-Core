@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mp4IykVQu0WvJ3QOHSHWGmF/6O4qMhnWJs2/Tu2mf4caZ8YQmMpbJ1E1rc+RyF45QPCgM2PVPjcVX85lSqYkag==",
+  "dgSpecHash": "MNumZXfeyQKggSSeLNOounUYA0U3pkCoyO1DYHTMRBraJd6Wpbvr9JYI8EGPeSZ0Ogyz0yvWX3DaGvSlmu7muA==",
   "success": true,
   "projectFilePath": "C:\\workspace\\nArchitecture\\src\\corePackages\\Core.Packages\\Core.Application\\Core.Application.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,8 @@
     "C:\\Users\\cceli\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver.design\\1.1.6\\microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
     "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
-    "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
     "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\cceli\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.1.0\\microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
