@@ -10,7 +10,8 @@ public class LogDetailWithException : LogDetail
 {
     public string ExceptionMessage { get; set; }
 
-    public LogDetailWithException(string exceptionMessage)
+
+    public LogDetailWithException()
     {
         ExceptionMessage = string.Empty;
     }
